@@ -13,6 +13,10 @@ app.get("/",(req,res)=>{
     res.sendFile(path.join(intial_path,"home.html"));
 })
 
+app.get("/editor",(req,res)=>{
+    res.sendFile(path.join(intial_path,"editor.html"));
+})
+
 app.listen(port,()=>{
     console.log("Listening at port",port);
 })
