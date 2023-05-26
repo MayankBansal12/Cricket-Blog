@@ -1,0 +1,15 @@
+{
+  "name": "cricket-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Mayank Bansal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0"
+  }
+}
