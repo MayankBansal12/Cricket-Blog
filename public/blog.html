@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Css stylesheets -->
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/editor.css">
+    <link rel="stylesheet" href="./css/blog.css">
+    
+    <title>Blog: </title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <img src="./images/Loggo.png" alt="Logo" class="logo">   
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="/">Home</a></li>
+            <li class="nav-item"><a href="/editor">Editor</a></li>
+            <li class="nav-item"><a href="/about">About</a></li>
+            <li class="nav-item"><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="banner"></div>
+
+    <div class="blog">
+        <h1 class="blog-title"></h1>
+        <p class="published"><span>Published At- </span></p>
+        <div class="blog-content">
+            
+        </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+    <script src="./js/firebase.js"></script>
+    <script src="./js/blog.js"></script>
+</body>
+</html>

@@ -92,3 +92,7 @@ textarea::-webkit-scrollbar-thumb{
 .blog-options label:hover{
     color: white;
 }
+
+.upload-btn{
+    margin-bottom: 5px;
+}
