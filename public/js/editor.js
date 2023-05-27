@@ -45,7 +45,7 @@ const addImage=(imagePath,alt)=>{
     contentField.value=contentField.value.slice(0,cursorPos)+textToInsert+contentField.value.slice(cursorPos);
 }
 
-const months=["Jan","Feb","Mar","Apr","Jun","Jul","Aug","Sept","Oct","Nov","Dec"]
+const months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"]
 
 publishBtn.addEventListener("click",()=>{
     if(contentField.value.length && titleField.value.length){
@@ -64,7 +64,7 @@ publishBtn.addEventListener("click",()=>{
             title: titleField.value,
             content: contentField.value,
             bannerImage: bannerPath,
-            publishedAt: `${date.getDate()} ${months[date.getMonth()-1]} ${date.getFullYear()}`
+            publishedAt: `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`
         })
         .then(()=>{
             location.href="/"+docName;
