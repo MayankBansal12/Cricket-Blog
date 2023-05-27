@@ -17,6 +17,7 @@ uploadInput.addEventListener("change",()=>{
     uploadImage(uploadInput,"image");
 })
 
+// Upload Image
 const uploadImage=(uploadFile,uploadType)=>{
     const [file]=uploadFile.files;
     if(file && file.type.includes("image")){
@@ -39,6 +40,7 @@ const uploadImage=(uploadFile,uploadType)=>{
     }
 }
 
+// Add image
 const addImage=(imagePath,alt)=>{
     let cursorPos=contentField.selectionStart;
     let textToInsert=`\r![${alt}](${imagePath})\r`;
@@ -47,6 +49,8 @@ const addImage=(imagePath,alt)=>{
 
 const months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"]
 
+
+// Publish the post
 publishBtn.addEventListener("click",()=>{
     if(contentField.value.length && titleField.value.length){
         let letters="abcdefghijklmnopqrstuvwxyz";
@@ -71,3 +75,29 @@ publishBtn.addEventListener("click",()=>{
         }).catch(err=>console.error(err));
     }
 })
+
+
+// Login Authentication
+let ui = new firebaseui.auth.AuthUI(auth);
+let login= document.querySelector(".login");
+
+auth.onAuthStateChanged((user)=>{
+    if(user){
+        login.style.display="none";
+    }else{
+        setUpLoginButton();
+    }
+})
+
+const setUpLoginButton=()=>{
+    ui.start("#loginUI",{
+        callbacks:{
+            singInSucessWithAuthResult: function(authRes,redirectURL){
+                login.style.display="none";
+                return false;
+            }
+        },
+        signInFlow: "popup",
+        signInOptions: [firebase.auth.GoogleAuthProvider.PROVIDER_ID]
+    });
+}
