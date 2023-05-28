@@ -24,19 +24,24 @@
         <div id="loginUI"></div>
     </div>
 
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="/"><img src="./images/Logo.png" alt="Logo" class="logo"></a>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="/">Home</a></li>
+            <li class="nav-item"><a href="/about">About</a></li>
+            <li class="nav-item"><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
     <!-- Editor Section -->
-    <div class="banner">
-        <input type="file" accept="image/*" id="banner-upload" hidden>
-        <label for="banner-upload" class="banner-upload-btn"><i class="fa-solid fa-upload"></i></label>
-    </div>
     <div class="blog">
+        <input type="link" id="banner-path" placeholder="Enter source of image">
         <textarea type="text" id="blog-title" class="blog-title" placeholder="Title..."></textarea>
-        <textarea type="text" id="blog-content" class="blog-content" placeholder="Write your post here..."></textarea>
+        <textarea type="text" id="blog-content" class="blog-content" placeholder="Write your post here...(For images: write ![alt](image-src) and for headings use #)"></textarea>
     </div>
     <div class="blog-options">
         <button class="button btn-dark publish-btn">Publish</button>
-        <input type="file" accept="image/*" id="image-upload" hidden>
-        <label for="image-upload" class="button upload-btn">Upload Image</a></label>
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>

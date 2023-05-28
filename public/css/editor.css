@@ -111,3 +111,23 @@ textarea::-webkit-scrollbar-thumb{
 .upload-btn{
     margin-bottom: 5px;
 }
+
+/* navbar */
+.editor{
+    justify-content: flex-end;
+}
+.editor li.nav-item {
+    margin-bottom: 10px;
+}
+
+input#banner-path {
+    margin-block: 2rem;
+    background: transparent;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.25rem;
+    color: white;
+    outline: none;
+    border: none;
+    border-bottom: 1.5px solid white;
+}

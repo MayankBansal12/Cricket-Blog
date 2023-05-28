@@ -13,7 +13,7 @@ app.use(express.static(intial_path));
 app.use(fileUpload());
 
 app.get("/",(req,res)=>{
-    res.sendFile(path.join(intial_path,"home.html"));
+    res.sendFile(path.join(intial_path,"index.html"));
 })
 
 app.get("/editor",(req,res)=>{

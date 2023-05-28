@@ -2,50 +2,12 @@ const titleField=document.querySelector(".blog-title");
 const contentField=document.querySelector(".blog-content");
 
 // Banner
-const bannerImage=document.querySelector("#banner-upload");
+const bannerImage=document.querySelector("#banner-path");
 const banner=document.querySelector(".banner");
 let bannerPath;
 
 const publishBtn=document.querySelector(".publish-btn");
 const uploadInput=document.querySelector("#image-upload");
-
-bannerImage.addEventListener("change",()=>{
-    uploadImage(bannerImage,"banner");
-})
-
-uploadInput.addEventListener("change",()=>{
-    uploadImage(uploadInput,"image");
-})
-
-// Upload Image
-const uploadImage=(uploadFile,uploadType)=>{
-    const [file]=uploadFile.files;
-    if(file && file.type.includes("image")){
-        const formData=new FormData();
-        formData.append("image",file);
-        fetch("/upload",{
-            method: "post",
-            body: formData
-        }).then(res=>res.json())
-        .then(data=>{
-            if(uploadType=="image"){
-                addImage(data,file.name);
-            }else{
-                bannerPath= `${location.origin}/${data}`;
-                banner.style.backgroundImage=`url("${bannerPath}")`
-            }
-        })
-    }else{
-        alert("Upload image only!");
-    }
-}
-
-// Add image
-const addImage=(imagePath,alt)=>{
-    let cursorPos=contentField.selectionStart;
-    let textToInsert=`\r![${alt}](${imagePath})\r`;
-    contentField.value=contentField.value.slice(0,cursorPos)+textToInsert+contentField.value.slice(cursorPos);
-}
 
 const months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"]
 
@@ -53,15 +15,16 @@ const months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov"
 // Publish the post
 publishBtn.addEventListener("click",()=>{
     if(contentField.value.length && titleField.value.length){
-        let letters="abcdefghijklmnopqrstuvwxyz";
+        let chars="abcdefghijklmnopqrstuvwxyz1234567890";
         let blogTitle=titleField.value.split(" ").join("-");
         let id="";
         for(let i=0;i<4;i++){
-            id+=letters[Math.floor(Math.random()*letters.length)];
+            id+=chars[Math.floor(Math.random()*chars.length)];
         }
         // setting up doc name
         let docName=`${blogTitle}-${id}`;
         let date=new Date();
+        bannerPath=bannerImage.value;
 
         // access firestore with database variable
         db.collection("blogs").doc(docName).set({
