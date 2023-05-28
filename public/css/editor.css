@@ -76,10 +76,11 @@ textarea::-webkit-scrollbar-thumb{
 
 .blog-content{
     height: 500px;
-    font-size: 20px;
+    font-size: 1.1rem;
     line-height: 30px;
     font-weight: normal;
     white-space: pre-wrap;
+    margin-top: 3rem;
 }
 
 .blog-options{
