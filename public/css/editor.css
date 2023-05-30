@@ -66,7 +66,7 @@ textarea::-webkit-scrollbar-thumb{
     height: auto;
     outline: none;
     resize: none;
-    font-size: 50px;
+    font-size: 1.75rem;
     font-weight: 600;
     color: white;
     border: none;
@@ -117,9 +117,9 @@ textarea::-webkit-scrollbar-thumb{
 .editor{
     justify-content: flex-end;
 }
-.editor li.nav-item {
+/* .editor li.nav-item {
     margin-bottom: 10px;
-}
+} */
 
 input#banner-path {
     margin-block: 2rem;

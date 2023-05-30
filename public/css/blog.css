@@ -55,3 +55,12 @@
     font-weight: 500;
     text-align: center;
 }
+
+/* Scroll animation of navbar */
+.navbar{
+    transition: all 0.3s;
+    opacity: 0;
+}
+.blur{
+    opacity: 1;
+}

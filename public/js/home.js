@@ -46,3 +46,16 @@ const createBlog= (blog)=>{
 function navigateToPage(url){
     window.location.href=url;
 }
+
+// Scroll Reveal Animation
+const sr=ScrollReveal({
+    delay: 200,       // Delay before the animation starts
+    duration: 1000,  // Animation duration
+    distance: '20px', // Distance the element moves during the animation
+    origin: 'bottom', // Starting point of the animation (top, bottom, left, right)
+    easing: 'ease-in-out', // Easing effect
+    opacity: 0,      // Starting opacity
+    interval: 200    // Delay between each element's animation
+});
+
+sr.reveal(".content");
