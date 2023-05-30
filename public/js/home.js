@@ -3,6 +3,15 @@ const blogEl=document.querySelector(".blog-section");
 const scrollEl=document.getElementById("scroll-btn");
 
 window.addEventListener("scroll",()=>{
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop === 0) {
+        // User is at the top of the page, remove blur class
+        navEl.classList.remove('blur');
+    } else {
+        // User has scrolled, add blur class
+        navEl.classList.add('blur');
+    }
+    
     if(window.scrollY>blogEl.offsetTop-navEl.offsetHeight){
         navEl.classList.add("active");
     }else{
@@ -11,8 +20,8 @@ window.addEventListener("scroll",()=>{
 });
 
 scrollEl?.addEventListener("click",()=>{
-    const blogSection=document.getElementById("blog-section")
-    blogSection.scrollIntoView({behavior: "smooth"});
+    const blogs=document.getElementById("blog")
+    blogs.scrollIntoView({behavior: "smooth"});
 })
 
 const blogSection=document.querySelector(".blog-section");

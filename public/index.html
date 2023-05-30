@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/wbBanner.png" type="image/png">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/6173d424ad.js" crossorigin="anonymous"></script>
 
     <!-- Google Fonts -->
 
     <!-- Css Stylesheet -->
     <link rel="stylesheet" href="./css/home.css">
 
-    <title>Blog: HomePage</title>
+    <title>EDY Blogs-Beyond the Game Deep into the Name</title>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
         <a href="/"><img src="./images/Logo.png" alt="Logo" class="logo"></a>
         <ul class="nav-menu">
-            <li class="nav-item"><a href="/">Home</a></li>
-            <li class="nav-item"><a href="/about">About</a></li>
-            <li class="nav-item"><a href="/contact">Contact</a></li>
+            <li class="list-item"><a href="/">Home</a></li>
+            <li class="list-item"><a href="/about">About</a></li>
+            <li class="list-item"><a href="/contact">Contact</a></li>
         </ul>
     </nav>
 
@@ -34,7 +37,55 @@
         </div>
     </header>
 
-    <section class="blog-section" id="blog-section"></section>
+    <!-- About Section -->
+    <div class="about-section">
+        <div class="about-content">
+            <h1>What does EDY stands for?</h1>
+            <p>EDY(Emotionally Driven Yorker) as the name suggests, is the cricket blog which is managed by R&M (Ram and Mayank). We would love to focus on the emotions of both the fans and the players. There is a lot that goes behind all these numbers and stats and through this blog, we would love to express our opinions and would love for you to get involved in the process as well.</p>
+            <h2>Going Beyond the Game</h2>
+            <h2>Deep into the Name</h2>
+            <h3>You can read more about us below:</h3>
+            <a href="/about" class="button about-btn">Learn More</a>
+        </div>
+        <img src="./images/wbBanner.png" alt="banner image" class="img">
+    </div>
+
+    <!-- Blog Section -->
+    <div id="blog">
+        <h1 class="blog-heading">Blog Posts</h1>
+        <section class="blog-section" id="blog-section"></section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <a href="#" id="company-logo">
+            <img src="./images/wbBanner.png" alt="Company Banner" class="img">
+        </a>
+        <div class="footer-menu">
+            <p>
+                Going beyond the game and deep into the name. For more details, go through About Page. Write to us at 
+                <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBptJQGXRhtBDKQrMSSBQSTpKJHXQDBCbfGrtBKSLFlmxgvsVkCZMGvnqcbrkMWtgDgcLrN" target="_blank">mayankbansal125@gmail.com</a>
+            </p>
+            <div>
+                <ul>
+                    <li class="list-item"><a href="/about">About</a></li>
+                    <li class="list-item"><a href="/contact">Contact</a></li>
+                    <li class="list-item"><a href="#blog">Blog</a></li>
+                    <li class="list-item"><a>Sign up for Newsletter</a></li>
+                </ul>
+                <ul class="socials">
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/Ramsapra___18"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/mayank-bansal-b14837247/"><i class="fa-brands fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="sub-footer">
+        &copy; 2023 EDY Blogs-Mayank Bansal. All rights reserved.
+    </div>
+
 
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
