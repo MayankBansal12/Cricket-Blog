@@ -1,5 +1,5 @@
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400&display=swap');
-
 
 /* CSS Variables*/
 :root{
@@ -156,6 +156,7 @@ a{
 .tagline{
     color: rgb(236 236 236);
     position: relative;
+    margin-block: 3rem 0rem;
 }
 .tagline::before {
     position: absolute;
@@ -170,8 +171,8 @@ a{
 /* BLog Section */
 .blog-heading{
     padding-inline: 5%;
-    color: white;
-    margin-bottom: 2.5rem;
+    color: var(--highlight-color);
+    margin-block: 2.5rem;
     text-align: center;
 }
 .blog-section{

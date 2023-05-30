@@ -20,6 +20,10 @@ app.get("/editor",(req,res)=>{
     res.sendFile(path.join(intial_path,"editor.html"));
 })
 
+app.get("/about",(req,res)=>{
+    res.sendFile(path.join(intial_path,"about.html"));
+});
+
 app.post("/upload",(req,res)=>{
     let file=req.files?.image;
     let date=new Date();

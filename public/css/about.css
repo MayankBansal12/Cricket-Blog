@@ -1,0 +1,72 @@
+
+/* Navbar */
+.navbar{
+    background-color: var(--background-color);
+    padding-block: 2.5rem;
+}
+
+.about-year {
+    color: white;
+    position: absolute;
+    left: 45.5%;
+    top: 1%;
+    font-weight: bold;
+}
+
+/* About Section */
+.about-section{
+    margin-top: 6%;
+}
+
+.about-logo{
+    position: relative;
+}
+
+.about-logo img {
+    height: 240px !important;
+    width: 95% !important;
+}
+
+.about-content p {
+    margin-block: 1rem 2rem !important;
+}
+
+
+.contact-btn{
+    background-color: var(--background-color);
+    color: var(--highlight-color);
+}
+.contact-btn:hover{
+    background-color:  rgba(0, 43, 63,0.9);
+    color: white;
+}
+
+/* Contact section */
+
+.contact-section {
+    margin-inline: 5%;
+    color: white;
+    text-align: center;
+}
+.contact-heading {
+    color: var(--highlight-color);
+    margin-block: 2rem;
+}
+.info-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 4rem;
+    margin-block: 3rem;
+}
+.blog-card{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.info-container .socials {
+    display: flex;
+    gap: 2rem;
+    padding-left: 1rem;
+}
