@@ -202,9 +202,7 @@ a{
     width: calc(100% + 40px);
     margin-left: -20px;
 }
-.blog-title{
-    text-align:justify;
-}
+
 .blog-tagline{
     margin: 10px 0 30px;
     line-height: 30px;
@@ -251,6 +249,7 @@ footer {
 }
 .img {
     width: 350px;
+    margin-right: 1rem;
 }
 
 /* Sub Footer */

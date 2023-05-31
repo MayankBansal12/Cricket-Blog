@@ -25,7 +25,7 @@ const setUpBlog=(data)=>{
 
 const addContent= (ele,data)=>{
     data=data.split("\n").filter(item=>item.length);
-    console.log(data);
+    // console.log(data);
 
     data.forEach(item => {
         // check for heading
