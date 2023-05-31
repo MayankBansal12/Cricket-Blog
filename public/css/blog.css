@@ -1,3 +1,8 @@
+
+/* body{
+    overflow: hidden;
+} */
+
 .blog{
     color: white;
 }
@@ -13,8 +18,8 @@
     padding-bottom: 0;
 }
 
-.blog-content,
-.blog-title{
+.blog .blog-content,
+.blog .blog-title{
     min-height: auto;   
     height: fit-content;
     padding: 0 10px;
@@ -24,6 +29,11 @@
 .blog-content h2,
 .blog-content h3{
     margin-block: 3rem;
+}
+
+.blog .blog-title,
+.blog .blog-content{
+    max-width: 100vw;
 }
 
 .published{
@@ -54,6 +64,11 @@
     font-size: 30px;
     font-weight: 500;
     text-align: center;
+}
+
+/* Blog card */
+.blog-card .blog-title{
+    padding: 0;
 }
 
 /* Scroll animation of navbar */
